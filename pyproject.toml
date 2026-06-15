@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dchook"
+version = "1.0.0"
+description = "A lightweight Python library and CLI for sending messages through Discord webhooks."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+
+authors = [{ name = "fmasterpro27" }]
+
+dependencies = ["requests>==2.34.2"]
+
+keywords = [
+    "discord",
+    "webhook",
+    "discord-webhook",
+    "notifications",
+    "cli",
+    "discord-bot",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.scripts]
+dchook = "dchook.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Fmasterpro27/DCHook"
+Repository = "https://github.com/Fmasterpro27/DCHook"
+Issues = "https://github.com/Fmasterpro27/DCHook/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
