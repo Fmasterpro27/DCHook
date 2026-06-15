@@ -1,7 +1,10 @@
 from .webhook import Webhook, send
-from importlib.metadata import version
+from importlib.metadata import version, PackageNotFoundError
 
-__version__ = f"dchook v{version('dchook')}"
+try:
+    __version__ = f"dchook v{version('dchook')}"
+except PackageNotFoundError:
+    __version__ = "dchook dev"
 
 __all__ = [
     "Webhook",
